@@ -1,0 +1,9 @@
+<ul>
+    {% for menu_item in menu %}
+        {% if menu_item == active_menu_item %}
+        <strong><li><a href="{{ menu_item.slug }}">{{ menu_item.name }}</a></li></strong>
+        {% else %}
+        <li><a href="{{ menu_item.slug }}">{{ menu_item.name }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
